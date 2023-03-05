@@ -4,9 +4,6 @@ export default class ErrorRepository {
   }
 
   translate(code) {
-    if (this.map.has(code)) {
-      return this.map.get(code);
-    }
-    return 'Unknown error';
+    return this.map.get(code) || 'Unknown error';
   }
 }
